@@ -1,0 +1,462 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    --color_text: rgb(240,239,242);
+    --color_hover:rgb(0, 198, 198);
+    --color_tajam:rgb(0,141,170);
+    --backgroundcolor_fon:rgba(29, 14, 65, 0.9);
+    --color_text_content:rgb(185,184,188);
+    --color_text_h1:rgb(61,55,70);
+    --color_selection:rgb(17, 112, 159);
+    --color_selection_text:white;
+    scroll-behavior: smooth;
+}
+html{
+    cursor: url(../icon/icons8-select-cursor-24.png) 2 2, auto;
+}
+body{
+    animation: scrol 10s linear forwards ;
+}
+@keyframes scrol{
+    0%{
+       overflow:hidden;
+   }
+   100%{
+       overflow: auto;
+   }
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+ ::-webkit-scrollbar{
+    height:40px;
+        
+}   
+ ::-webkit-scrollbar-thumb{
+    background-color: rgb(33, 98, 101);
+            
+}
+ ::-webkit-scrollbar-track{
+    background-color: rgb(1, 42, 67);         
+}
+::selection{
+    color: rgb(6, 196, 161);
+    background:rgb(62, 4, 78);
+}
+/* ---------Анімація при загрузці сторінки---------- */
+   .scene{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0611a5,#558bd1);
+    animation: topBlock 3s 2s linear   forwards ;  
+}
+.loading__block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 1001;
+}
+.title{
+    font-size: 25px;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+.progres{
+    width: 100px;
+    height: 12px;
+    border: 1px solid rgb(101, 20, 122);
+    border-radius: 8px;
+     position: relative;
+}
+.progres::before{
+content: '';
+position: absolute;
+top: 2px;
+bottom: 2px;
+left: 2px;
+background-color: rgba(85, 9, 106, 0.827);
+border-radius: 12px;
+animation:progresLine 2s ease forwards ;
+}
+@keyframes progresLine{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: calc(100% - 4px);
+    }
+}
+@keyframes topBlock{
+    0%{
+        transform: translateY(0) scale(1) ;
+    }
+    100%{
+        transform: translateY(-100%) scale(1) ;
+         opacity: 0.6;
+    }
+}
+.menu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../icon/1.jpg) ; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+ .fon{
+    background:var(--backgroundcolor_fon);
+    width: 100%;
+    height: 100vh;
+ }
+ /* ----------Боковые кнопки------------ */
+ .fixed{
+    position: fixed;
+    top: 75%;
+    left: 85%;
+    right: 10%;
+    width: 100px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.fixed a .top{
+    background-image: url(../icon/icons-topaqua.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    transition: 2s;
+}
+.fixed a .top:hover{
+    background-image: url(../icon/icons-top.png);
+}
+.fixed a .bottom{
+    background-image: url(../icon/icons-bottomaqua.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    transition: 1s;
+}   
+.fixed a .bottom:hover{
+    background-image: url(../icon/icons-bottom.png);
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+.tajam{
+    height: 70px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.tajam .img img{
+    width: 70px;
+    height: 60px;
+}
+.tajam .text{
+    display: flex;
+    align-items: stretch;
+    width: 70px;
+    color:var( --color_tajam);
+    font-size: 30px;
+    font-weight: 200;
+}
+.menu_1 .menu_list{
+    margin: 0;
+}
+.menu_1 ul li{
+float: left;
+list-style-type: none;
+}
+.menu_1 ul li a{
+    color: var(--color_text);
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 3s;
+}
+.menu_1 ul li a:hover{
+    color: var(--color_hover);  
+}
+/*---------------- Burger ----------------*/
+.humburger_menu{
+    display: none;
+}
+#menu__toggle{
+   opacity: 0;
+}
+.menu__btn{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 90%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu__btn span{
+display: block;
+position: absolute;
+width: 100%;
+height: 3px;
+background-color: rgb(13, 94, 169);
+ } 
+.menu__btn span:before{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(13, 94, 169);
+}
+.menu__btn span:after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(13, 94, 169);
+}
+.menu__btn span::before{
+    content: '';
+    top: -8px;
+}
+.menu__btn span::after{
+    content: '';
+    top: 8px;
+}
+.menu__box{
+    display: block;
+    position: fixed;
+     visibility: hidden; 
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    padding: 50px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgba(7, 70, 86, 0.8);
+}
+.menu__item{
+    display: block;
+    padding: 10px 25px;
+    color: var(--color_text);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover{
+   background-color: var(--backgroundcolor_fon); 
+}
+#menu__toggle:checked~.menu__btn span{
+    transform: rotate(45deg);
+}
+#menu__toggle:checked~.menu__btn span::before{
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked~.menu__btn span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked~.menu__box{
+  visibility: visible;
+  left: 0;
+}
+
+.center{
+     display: flex; 
+     flex-direction: column;
+     justify-content: center; 
+    gap: 25px;
+    width: 100%;
+}
+.center .headline{
+    margin-top: 150px; 
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color_text);
+}
+.center .line{
+    display: block; 
+    margin: auto; 
+    width: 100px;
+    height: 3px;
+    background-color: rgb(7, 162, 162);
+    border-radius: 15px;
+}
+.center .text{
+    font-size: 15px;
+    text-align: center;
+    color: var(--color_text);
+}
+.link_1{
+    text-align: center;
+    margin-top: 50px;
+}
+.link_2{
+    display: block;
+    margin: auto;
+    padding: 8px;
+    border: 1px solid white;
+    width: 120px;
+    font-weight: 600;
+    color: var(--color_text);
+    transition: 3s;
+}
+.link_1 a{
+    text-decoration: none;
+}
+.menu .fon .link_1 .link_2:hover{
+    border:1px solid var(--color_hover);
+    color: var(--color_hover);
+}
+.dotter{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 120px;
+}
+.dotter div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 2s;
+}
+.dotter div:hover{
+    background-color: var(--color_hover);
+    border: 1px solid var(--color_hover) ;
+}
+/* Для позиционирования стрелок и бергер меню */
+
+@media(min-width: 300px) and (max-width: 850px){
+    .fixed{
+        left:75%;
+        top: 60%; 
+   }
+
+   .loading__block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+   .menu__box{
+    height: 100%;
+    padding-top: 50px;
+}
+   .menu__btn{
+    left: 85%;
+}
+    .header{
+    justify-content: flex-start;
+  }
+  .header .tajam{
+    width: 200px;
+  }
+  
+  .center .headline{
+    margin-top: 30px;
+  }
+  .fon .link_1{
+    margin-top: 20px;
+  }
+  .fon .dotter{
+    margin-top: 30px;
+  }
+}  
+@media(min-width: 300px) and (max-width: 850px){
+    .fixed{
+        left:75%;
+        top: 55%; 
+   }
+
+   .loading__block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 1001;
+}
+   .menu__box{
+    height: 100%;
+    padding-top: 50px;
+}
+   .menu__btn{
+    left: 85%;
+}
+    .header{
+    justify-content: flex-start;
+  }
+  .header .tajam{
+    width: 200px;
+  }
+  
+  .center .headline{
+    margin-top: 30px;
+  }
+  .fon .link_1{
+    margin-top: 20px;
+  }
+  .fon .dotter{
+    margin-top: 30px;
+  }
+}  
+@media(min-width: 300px) and (max-width: 850px)
+{
+    .humburger_menu{
+        display: block;
+        position: fixed;
+        z-index: 1;
+    }
+    .menu_1{
+        display: none;
+    }
+}
+@media(min-width: 300px) and (max-width: 400px){
+    .loading__block{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+    }
+   
+    .header{
+        justify-content: flex-start;
+      }
+      .header .tajam{
+        width: 200px;
+      }
+      .center .headline{
+        margin-top: 110px;
+      }
+      .fon .link_1{
+        margin-top: 70px;
+      }
+      .fon .dotter{
+        margin-top: 70px;
+      }
+    
+}  
+

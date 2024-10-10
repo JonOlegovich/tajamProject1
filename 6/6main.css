@@ -1,0 +1,435 @@
+html,body{
+    width: 100%;
+    margin: 0;
+}
+::selection{
+    color: rgb(6, 196, 161);
+    background:rgb(62, 4, 78);
+}
+.section_6_1{
+    background: url(icon6/1428104791_imagesbase.ru-1855.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    width: 100%;
+}
+.section_6_1 .background{
+background-color:var(--backgroundcolor_fon);
+width: 100%;
+}
+.section_6_1 .background .comma{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90px;
+}
+.section_6_1 .background .comma img{
+    width: 50px;
+    height: 50px;
+}
+.section_6_1 .background .text{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--color_text);
+}
+h6{
+    font-size: 20px;
+    font-weight: 400;
+}
+.teams{
+     display: flex;
+     flex-direction: column; 
+     justify-content: center; 
+     align-items: center; 
+     justify-content: center; 
+     color: var(--color_text);
+     gap: 50px;
+}
+.teams .name{
+     display: flex; 
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 20%;
+     width: 100%;
+     position: relative;
+}
+.teams .icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.teams .name p{
+    text-align: center;
+    margin: 0;
+}
+.teams .name .weight{
+    font-weight: 200;
+}
+ .teams .name .name_1{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    animation: nam_1 3s 6s linear ;
+} 
+  @keyframes nam_1{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}  
+ .teams .name .neem_2{
+    position: absolute;
+    top: 0;
+    opacity: 0; 
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 30px;
+    animation: ne 3s 21s linear forwards;
+} 
+@keyframes ne {
+    0%{
+        opacity: 0;
+    }
+     100%{
+        opacity: 1;
+     }
+}
+.teams .name .name_2{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    opacity: 0;
+    animation: nam_2 3s 9s linear ;
+}
+@keyframes nam_2{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.teams .name .name_3{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    opacity: 0;
+    animation: nam_3 3s 12s linear ;
+}
+@keyframes nam_3{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.teams .name .name_4{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    opacity: 0;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    animation: nam_4 3s 15s linear ;
+}
+@keyframes nam_4{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.teams .name .name_5{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    opacity: 0;
+    margin: 0;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    animation: nam_5 3s 18s linear ;
+}
+@keyframes nam_5{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.teams .control img{
+    width: 40px;
+    height: 40px;
+}
+.teams .control{
+    transition: 2s;
+}
+.teams .control:hover{
+    background-color: rgba(37, 73, 102, 0.5);
+    border-radius: 15px;
+}
+.icon .radius p{
+    display: none;
+}
+.teams .teams_1,.radius {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.teams .radius img{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.teams .teams_1 img{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation:t_1 3s 6s linear ; 
+}
+@keyframes t_1{
+    0%{
+       transform: scale(1);
+    }
+    50%{
+       transform: scale(1.3);
+    }
+   100%{
+       transform: scale(1);
+   }
+   }
+   .icon .teams_1 p{
+    animation: p_1 3s 6s linear ;
+}
+   @keyframes p_1{
+    0%{
+    display: none;
+    }
+    50%{
+display: block;
+    }
+    100%{
+ display: none;
+    }
+}
+   .teams .teams_2 img{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation:t_2 3s 9s linear ;
+}
+@keyframes t_2{
+    0%{
+       transform: scale(1);
+    }
+    50%{
+       transform: scale(1.3);
+    }
+   100%{
+       transform: scale(1);
+   }
+   }
+.teams .teams_3 img {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation: t_3 3s 12s linear  ;
+}
+    @keyframes t_3{
+     0%{
+        transform: scale(1);
+     }
+     50%{
+        transform: scale(1.3);
+     }
+    100%{
+        transform: scale(1);
+    }
+    }
+    .teams .teams_4 img {
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        animation: t_4 3s 15s linear ;
+    }
+        @keyframes t_4{
+         0%{
+            transform: scale(1);
+         }
+         50%{
+            transform: scale(1.3);
+         }
+        100%{
+            transform: scale(1);
+        }
+        }
+        .teams .teams_5 img{
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            animation: t_5 3s 18s linear ;
+        }
+            @keyframes t_5{
+             0%{
+                transform: scale(1);
+             }
+             50%{
+                transform: scale(1.3);
+             }
+            100%{
+                transform: scale(1);
+            }
+            }
+@media(min-width:300px) and (max-width:1200px){
+    .section_6_1{
+        width: 100%;
+    }
+    .section_6_1 .background{
+        width: 100%;
+    }
+    .section_6_1 .background .comma{
+        display: flex;
+        justify-content: center;
+    }
+    .teams .name .opasit{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+        animation: nam_1 3s 6s linear ;
+    } 
+      @keyframes nam_1{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }  
+    .teams .icon {
+        width: 100%;
+        gap:20px;
+        flex-direction: column;
+        align-items: center;
+        margin-top:0;
+    }
+    .teams .icon .control img{
+        display: none;
+    }
+    .teams .icon .radius{
+        width: 220px;
+    }
+    .teams .teams_1 img{
+        width: 80px;
+        height: 80px;
+        transition: 3s;
+    }
+    .teams .teams_1 img:hover{
+        transform: scale(1.1);
+    }
+    .teams .teams_2 img{
+        width: 80px;
+        height: 80px;
+        transition: 3s;
+    }
+    .teams .teams_2 img:hover{
+        transform: scale(1.1);
+    }
+    .teams .teams_3 img{
+        width: 80px;
+        height: 80px;
+        transition: 3s;
+    }
+    .teams .teams_3 img:hover{
+        transform: scale(1.1);
+    }
+    .teams .teams_4 img{
+        width: 80px;
+        height: 80px;
+        transition: 3s;
+    }
+    .teams .teams_4 img:hover{
+        transform: scale(1.1);
+    }
+    .teams .teams_5 img{
+        width: 80px;
+        height: 80px;
+        transition: 3s;
+    }
+    .teams .teams_5 img:hover{
+        transform: scale(1.1);
+    }
+    .icon .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .icon .row p{
+        display: block;
+    }
+    .icon .row .name{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
